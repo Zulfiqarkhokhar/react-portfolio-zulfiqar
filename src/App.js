@@ -1,21 +1,21 @@
 import './App.css';
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import Project from "./components/Projects";
-import {BuyerReview, SellerReview} from "./components/Reviews";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Route, Routes} from "react-router-dom";
+import WelcomePage from "./components/WelcomePage";
+import AllProject from "./components/AllProjects";
 
 function App() {
   return (
-    <div >
+    <>
       <Header/>
-      <HeroSection/>
-        <Project/>
-        <BuyerReview/>
-        <SellerReview/>
+        <Routes>
+            <Route path="/" element={<WelcomePage/>}/>
+            <Route path="/allprojects" element={<AllProject/>}/>
+        </Routes>
       <Footer/>
-    </div>
+    </>
   );
 }
 

@@ -34,9 +34,9 @@ export const BuyerReview = ()=>{
                 <h1 className="d-flex justify-content-center align-items-center">Buyer Reviews</h1>
     <Container className='py-5'>
         <Row xs={1} md={2} className="g-4">
-            {reviews.map((reviews) =>{
+            {reviews.map((reviews,index) =>{
                 return (
-                <Col className="col-lg-4 col-md-6 col-sm-12">
+                <Col key={index} className="col-lg-4 col-md-6 col-sm-12">
                     <Card>
                         <Card.Body>
                             <Image src={reviews.buyerImage}/>
